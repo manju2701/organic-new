@@ -1,0 +1,40 @@
+h3 {
+    margin: 0;
+}
+
+h6 {
+    margin: 0;
+    padding: 40px;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.empty-cart {
+    margin-top: 40px; 
+}
+
+.btn-continue-shopping {
+    background-color: #28a745;
+    border-color: #28a745; 
+    font-size: 1.25rem; 
+    padding: 10px 20px; 
+}
+
+.btn-continue-shopping:hover {
+    background-color: #218838;
+    border-color: #1e7e34; 
+}
+
+button {
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
