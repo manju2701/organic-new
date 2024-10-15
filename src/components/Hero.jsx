@@ -17,8 +17,8 @@ const Hero= () => {
             alt="Symbol" 
         />
                 <h3>Best Quality Products</h3>
-                <h1>Join The Organic Movement!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo..</p>
+                <h2>Join The Organic Movement!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.pulvinar dapibus leo..</p>
                 <Button variant="success" size="lg" className="banner-button">
                                 Shop Now
                             </Button>

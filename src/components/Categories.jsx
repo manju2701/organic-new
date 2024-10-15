@@ -1,11 +1,11 @@
-// Categories.js
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { CartContext } from './CartContext'; // Import the CartContext
+import { CartContext } from './CartContext'; 
 import '../styles/Categories.css'; 
 
 const Categories = () => {
-    const { addToCart } = useContext(CartContext); // Use the context
+    const { addToCart } = useContext(CartContext); 
+    const [notifications, setNotifications] = useState({}); 
 
     const products = [
         {
@@ -48,7 +48,13 @@ const Categories = () => {
 
     const handleAddToCart = (product) => {
         addToCart(product);
-        alert(`${product.title} has been added to the cart!`);
+        setNotifications(prev => ({
+            ...prev,
+            [product.title]: `Added ${product.title} to cart!`
+        }));
+        setTimeout(() => {
+            setNotifications(prev => ({ ...prev, [product.title]: '' }));
+        }, 3000); // Clear notification after 3 seconds
     };
 
     return (
@@ -63,10 +69,14 @@ const Categories = () => {
                                 <span>{product.category}</span><br />
                                 <Card.Title>{product.title}</Card.Title>
                                 <Card.Text>
-                                    <span className="rating">★★★★★</span><br />
                                     <strong>{product.price}</strong>
                                 </Card.Text>
-                                <Button className="btn-green" onClick={() => handleAddToCart(product)}>Add to Cart</Button>
+                                <Button variant="success" onClick={() => handleAddToCart(product)}>Add to Cart</Button>
+                                {notifications[product.title] && (
+                                    <div style={{ color: 'green', marginTop: '10px' }}>
+                                        {notifications[product.title]}
+                                    </div>
+                                )}
                             </Card.Body>
                         </Card>
                     </Col>

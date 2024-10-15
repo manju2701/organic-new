@@ -20,7 +20,7 @@ const OrganicShop = () => {
                     <Card className="custom-card">
                         <Card.Img
                             variant="top"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5guk56_q3q96HmJtSIoPZGBrBVtxxKkwfKQ&s"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGtKCu_wStLSU3V3tNjd7DyTjZ2-fRfksFow&s"
                             alt="Farm Fresh Fruits"
                             className="custom-img"
                         />
@@ -49,7 +49,7 @@ const OrganicShop = () => {
                             <Card.Text>
                                 Aliquam porta justo nibh, id laoreet sapien sodales vitae justo.
                             </Card.Text>
-                            <Button className="shop-button" href="https://websitedemos.net/organic-shop-02/?customize=template#">
+                            <Button className="shop-button" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqHHW7tO4FFq_6En0NYRhz79xz0V-NL5Wbg&s">
                             Shop Now
                             </Button>
                         </Card.Body>
@@ -60,7 +60,7 @@ const OrganicShop = () => {
                     <Card className="custom-card">
                         <Card.Img
                             variant="top"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGHg4l7b7aFVkackhFNxZPPqgnlTldVZ-lYg&s"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqHHW7tO4FFq_6En0NYRhz79xz0V-NL5Wbg&s"
                             alt="Organic Legume"
                             className="custom-img"
                         />

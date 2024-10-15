@@ -49,6 +49,9 @@ function NavScrollExample() {
                         <Button variant="link" as={Link} to="/login" className="text-decoration-none button-link ms-3">
                             <FontAwesomeIcon icon={faUser} size="lg" /> Login
                         </Button>
+                        <Button variant="link" as={Link} to="/signin" className="text-decoration-none button-link ms-3">
+                            <FontAwesomeIcon icon={faUser} size="lg" /> Signin
+                        </Button>
                         <Button variant="link" as={Link} to="/cart" className="text-decoration-none button-link ms-3">
                             <FontAwesomeIcon icon={faShoppingCart} size="lg" /> Cart
                         </Button>

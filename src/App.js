@@ -4,6 +4,7 @@ import { CartProvider } from './components/CartContext'; // Import CartProvider
 import NavScrollExample from './components/Navbar';
 import Categories from './components/Categories';
 import Login from './components/Login';
+import Signin from './components/Signin';
 import Cart from './components/Cart';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -22,7 +23,8 @@ import './styles/Navbar.css';
 const App = () => {
   const location = useLocation();
 
-  const noFooterRoutes = ['/login', '/cart'];
+  // Define routes that should not show the footer
+  const noFooterRoutes = ['/login', '/cart', '/signin'];
 
   return (
     <>
@@ -33,6 +35,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={
           <>
@@ -48,11 +51,14 @@ const App = () => {
           </>
         } />
       </Routes>
+
+      {/* Show footer only if the current path is not in the noFooterRoutes array */}
       {!noFooterRoutes.includes(location.pathname) && <Footer />}
     </>
   );
 };
 
+// Wrap the App component with BrowserRouter and CartProvider
 const WrappedApp = () => (
   <BrowserRouter>
     <CartProvider>
