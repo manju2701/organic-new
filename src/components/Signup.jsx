@@ -1,24 +1,38 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-import '../styles/Signin.css';
+import axios from 'axios'
+import '../styles/Signup.css';
 
-const Signin = () => {
+const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+ 
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
-    console.log('Username:', username);
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+
+
+    try {
+        const response = await axios.post('http://localhost:5000/user/register', {
+            username,
+            email,
+            password,
+        });
+        alert('Registration successful!');
+        console.log(response.data);
+        // Optionally, redirect or clear form after successful registration
+    } catch (err) {
+        console.error(err);
+       
+    }
+};
+
 
   return (
     <Container className="signin-container d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
       <div className="signin-form">
-        <h2>Sign In</h2>
+        <h2>Sign Up</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username</Form.Label>
@@ -54,7 +68,7 @@ const Signin = () => {
           </Form.Group>
 
           <Button variant="success" type="submit">
-            Sign In
+            Sign UP
           </Button>
         </Form>
       </div>
@@ -62,4 +76,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Signup;

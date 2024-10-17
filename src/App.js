@@ -4,7 +4,7 @@ import { CartProvider } from './components/CartContext'; // Import CartProvider
 import NavScrollExample from './components/Navbar';
 import Categories from './components/Categories';
 import Login from './components/Login';
-import Signin from './components/Signin';
+import Signup from './components/Signup';
 import Cart from './components/Cart';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -24,7 +24,7 @@ const App = () => {
   const location = useLocation();
 
   // Define routes that should not show the footer
-  const noFooterRoutes = ['/login', '/cart', '/signin'];
+  const noFooterRoutes = ['/login', '/cart', '/signup'];
 
   return (
     <>
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={
           <>
